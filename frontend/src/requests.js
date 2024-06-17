@@ -11,6 +11,6 @@ export const connector = {
         const res = await fetch(`
             http://localhost:4000/posts/${id}
         `);
-        return res.json();
+        return await res.json();
     },
 };
