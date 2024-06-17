@@ -8,7 +8,7 @@ const Post = db.posts;
 const app = express();
 
 const corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: `http://${process.env.FRONTEND_HOST}:${process.env.FRONTEND_PORT}`,
 }
 
 app.use(cors(corsOptions))

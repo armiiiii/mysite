@@ -1,10 +1,15 @@
 import { connector } from './requests.js'
+import Header from './ui/components/Header/Header.jsx';
+import GreetingsBody from './ui/bodies/Greetings.jsx';
+
 
 function App() {
     return (
         <>
-        <h1>Hello!</h1>
-        <button onClick={connector.getPosts}>Make a request here!</button>
+        <Header />
+        <main>
+            <GreetingsBody />
+        </main>
         </>
     );
 }
