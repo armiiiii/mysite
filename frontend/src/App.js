@@ -1,23 +1,17 @@
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import { connector } from './requests.js'
+import Header from './ui/components/Header/Header.jsx';
+import GreetingsBody from './ui/bodies/Greetings.jsx';
 
-import Mainpage from "./pages/Mainpage";
-import Aboutmepage from "./pages/Aboutmepage";
-import Contactpage from "./pages/Contactpage";
-import Header from './ui/header/Header';
-import Footer from "./ui/footer/Footer";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Header />
-        <Routes>
-          <Route element={<Mainpage />} path="/" />
-          <Route element={<Aboutmepage />} path="/aboutme" />
-          <Route element={<Contactpage />} path="/contact" />
-        </Routes>
-      <Footer /> 
-    </BrowserRouter>
-  );
+    return (
+        <>
+        <Header />
+        <main>
+            <GreetingsBody />
+        </main>
+        </>
+    );
 }
 
 export default App;
