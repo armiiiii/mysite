@@ -1,0 +1,12 @@
+#root {
+    display: grid;
+    grid-template:
+        "header header header" 56px
+        "main main main" auto
+        "footer footer footer" 56px
+        / 10% auto 10%;
+}
+
+main {
+    grid-template: main;
+}
